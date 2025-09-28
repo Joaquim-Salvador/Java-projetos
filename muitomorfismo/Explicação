@@ -1,0 +1,12 @@
+Polimorfrismo é um dos pilares da programação orientada 
+a objetos, nela acontece que um método pode ter diferentes 
+funções em classes diferentes.
+
+Para usar o polimorfrismo eu preciso criar uma classe Pai que 
+vai conter o método original, nas classes filhas, eu crio 
+métodos com o mesmo nome do método da classe pai, mas com 
+funções diferentes
+
+Polimorfrismo de sobrescrita: A sobrescrita acontece quando você tem herança. Você cria uma classe pai com um método, e nas classes filhas você cria métodos com o mesmo nome, mas que fazem coisas diferentes. Quando você chama esse método, ele executa de acordo com o tipo do objeto real, mesmo que você use o tipo da classe pai para chamar.
+
+Polimorfrismo de sobrecarga: A sobrecarga acontece dentro da mesma classe, sem precisar de herança. Você cria vários métodos com o mesmo nome, mas com quantidade ou tipo de parâmetros diferentes. O método que vai ser executado depende dos parâmetros que você usa na hora da chamada, e essa decisão é feita enquanto o programa é compilado.
