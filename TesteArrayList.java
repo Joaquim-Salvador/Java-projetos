@@ -7,10 +7,10 @@ public class TesteArrayList {
     int sair = 0;
     
     ArrayList<String> lista = new ArrayList<>();
-    
 
     do {
-    System.err.println("1) Adicionar\n2) Listar\n3) Excluir\n4) Sair");
+    System.err.print("1) Adicionar\n2) Listar\n3) Excluir\n4) Editar \n5) Sair\nOpção: ");
+
     int escolha = sc.nextInt();
 
     switch (escolha){
@@ -32,23 +32,39 @@ public class TesteArrayList {
             }   }
 
         case 3 -> {
-            System.out.println("Digite o id do usuário que será deletado: ");
+            System.out.print("Digite o id do usuário que será deletado: ");
             int id = sc.nextInt();
-            System.out.println("Usuário(a) " +lista.get(id)+ " foi removido(a)");
-            lista.remove(id);
 
-            if (id > lista.size() || id < lista.size()){
-                System.out.println("Esse id não existe na lista: ");
+            if (id < 0 || id >= lista.size()){
+                System.out.println("Esse id não existe na lista");
+            } else {
+                System.out.println("Usuário(a) " +lista.get(id)+ " foi removido(a)");
+                lista.remove(id);
             }
             }
 
         case 4 -> {
+            System.out.print("Digite o id que será editado: ");
+            int id = sc.nextInt();
+
+            if (id < 0 || id >= lista.size()){
+                System.out.println("Esse id não existe na lista");
+            } 
+            System.out.println("Novo nome: ");
+            sc.nextLine();
+            String novoUsuario = sc.nextLine();
+
+            System.out.print("Usuário " + lista.get(id) + " alterado para " + novoUsuario + "\n");
+
+            lista.set(id, novoUsuario);
+        }
+        case 5 -> {
             System.out.println("Saindo...");
-            sair = 4;
+            sair = 5;
             }
 
         default -> System.out.println("Número inválido, digite um número da lista");
-    }} while (sair != 4);
+    }} while (sair != 5);
     
 
 sc.close();
