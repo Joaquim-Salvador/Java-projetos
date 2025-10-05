@@ -40,3 +40,11 @@ public class ApiController {
         return ResponseEntity.ok().build();
     }
 }
+// Colar no CMD para o programa funcionar
+
+// Rodar o servidor: mvn spring-boot:run
+// Adicionar tarefa: curl -X POST http://localhost:8080/tasks -H "Content-Type: text/plain" -d "Estudar Java"
+// Ver as tarefas: curl -X GET http://localhost:8080/tasks
+// Adicionar outra tarefa: curl -X POST http://localhost:8080/tasks -H "Content-Type: text/plain" -d "Treinar Spring Boot"
+// Limpar todas as tarefas: curl -X DELETE http://localhost:8080/tasks
+
